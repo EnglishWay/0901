@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class WordsActivity extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class WordsActivity extends AppCompatActivity {
     }
     private void setListeners(){
         button20.setOnClickListener(viewWords);
-        button45.setOnClickListener(viewWords);
+        button45.setOnClickListener(noWords);
         button70.setOnClickListener(viewWords);
     }
 
@@ -38,7 +39,23 @@ public class WordsActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent intent = new Intent();
             intent.setClass(WordsActivity.this, AllWordsActivity.class);
+            Bundle bundle = new Bundle();
+            switch (v.getId()){
+                case R.id.word2000:
+                    bundle.putString("ONCLICK", "Words1200");
+                    break;
+                case R.id.word7000:
+                    bundle.putString("ONCLICK", "Words7000");
+                    break;
+            }
+            intent.putExtras(bundle);
             startActivity(intent);
+        }
+    };
+    private View.OnClickListener noWords = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(WordsActivity.this,"敬請期待",Toast.LENGTH_SHORT).show();
         }
     };
 }

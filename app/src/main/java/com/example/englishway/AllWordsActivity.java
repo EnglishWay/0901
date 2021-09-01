@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,9 +24,17 @@ public class AllWordsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_allwords);
 
-        ListView listView = (ListView)this.findViewById(R.id.word_info);
+        ListView listView = (ListView) this.findViewById(R.id.word_info);
 
-        List<initdate>list = new ArrayList<>();
+        List<initdate> list = new ArrayList<>();
+        String selectedTable = "";
+
+        try {
+            Bundle bundle = this.getIntent().getExtras();
+            selectedTable = bundle.getString("ONCLICK");
+        } catch (Exception obj) {
+            Toast.makeText(this, "錯誤", Toast.LENGTH_SHORT).show();
+        }
 
         MyDBOpenHelper db;
         db = new MyDBOpenHelper(this);
@@ -42,21 +51,30 @@ public class AllWordsActivity extends AppCompatActivity {
 
         SQLiteDatabase db1;
         db1 = openOrCreateDatabase("Words", Context.MODE_PRIVATE, null);
-        Cursor c = db1.rawQuery("SELECT * FROM Words1200", null);
-
+        Cursor c;
+        switch (selectedTable) {
+            case "Words1200":
+                c = db1.rawQuery("SELECT * FROM Words1200", null);
+                break;
+            case "Words7000":
+                c = db1.rawQuery("SELECT * FROM Words7000", null);
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + selectedTable);
+        }
         c.moveToFirst();
 
         //獲取表資料
         while (!c.isAfterLast()) {
-            list.add(new initdate(c.getString(c.getColumnIndex("_word")),c.getString(c.getColumnIndex("_intpn"))));
+            list.add(new initdate(c.getString(c.getColumnIndex("_word")), c.getString(c.getColumnIndex("_intpn"))));
 
             c.moveToNext();
         }
 
         //將獲取到的資料通過一個迴圈存放到map物件中
         List<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
-        for(int i = 0; i < list.size(); i++){
-            HashMap<String, Object>item = new HashMap<String, Object>();
+        for (int i = 0; i < list.size(); i++) {
+            HashMap<String, Object> item = new HashMap<String, Object>();
             item.put("word", list.get(i).word);
             item.put("meaning1", list.get(i).intpn);
             data.add(item);
