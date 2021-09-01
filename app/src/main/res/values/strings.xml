@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">EnglishWay</string>
+    <string name="button_shop">商店</string>
+    <string name="button_words">單字</string>
+    <string name="button_pet">寵物</string>
+    <string name="button_work">關卡</string>
+    <string name="button_back">返回</string>
+    <string name="_2000">2000單</string>
+    <string name="_4500">4500單</string>
+    <string name="_7000">7000單</string>
+    <string name="word_star">已加星號</string>
+    <string name="button_work1">關卡1</string>
+    <string name="button_work2">關卡2</string>
+    <string name="button_work3">關卡3</string>
+    <string name="button_work4">關卡4</string>
+    <string name="button_work5">關卡5</string>
+    <string name="button_work6">關卡6</string>
+    <string name="button_work7">關卡7</string>
+    <string name="button_work8">關卡8</string>
+    <string name="button_work9">關卡9</string>
+    <string name="button_work10">關卡10</string>
+    <string name="pet_1">寵物1</string>
+    <string name="pet_2">寵物2</string>
+    <string name="pet_3">寵物3</string>
+    <string name="pet_4">寵物4</string>
+    <string name="pet_5">寵物5</string>
+    <string name="pet_6">寵物6</string>
+    <string name="feed">餵食</string>
+    <string name="evolve">進化</string>
+    <string name="button_earn">收成金幣</string>
+</resources>
