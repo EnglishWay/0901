@@ -20,17 +20,16 @@ public class WordsActivity extends AppCompatActivity {
         setListeners();
     }
     private Button button20;
-    private Button button45;
     private Button button70;
+    private Button buttonStars;
 
     private void initViews(){
         button20 = (Button)findViewById(R.id.word2000);
-        button45 = (Button)findViewById(R.id.word4500);
         button70 = (Button)findViewById(R.id.word7000);
+        buttonStars = (Button)findViewById(R.id.word_star);
     }
     private void setListeners(){
         button20.setOnClickListener(viewWords);
-        button45.setOnClickListener(noWords);
         button70.setOnClickListener(viewWords);
     }
 
@@ -47,15 +46,12 @@ public class WordsActivity extends AppCompatActivity {
                 case R.id.word7000:
                     bundle.putString("ONCLICK", "Words7000");
                     break;
+                case R.id.word_star:
+                    bundle.putString("ONCLICK","WordsStar");
+                    break;
             }
             intent.putExtras(bundle);
             startActivity(intent);
-        }
-    };
-    private View.OnClickListener noWords = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(WordsActivity.this,"敬請期待",Toast.LENGTH_SHORT).show();
         }
     };
 }

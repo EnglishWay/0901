@@ -5,11 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AllWordsActivity">
+    <LinearLayout
+        android:id="@+id/allwords_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/material_motion_duration_short_1"
+            android:gravity="center"
+            android:text="單字解釋"
+            android:background="@color/teal"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="星號"
+            android:background="@color/teal_200"/>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/word_info"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/allwords_topbar">
+
+    </ListView>
 
 
 </RelativeLayout>

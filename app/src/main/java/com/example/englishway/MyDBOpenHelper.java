@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -58,6 +59,12 @@ public class MyDBOpenHelper extends SQLiteOpenHelper {
         String myPath = DB_PATH + DB_NAME;
         db = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
         Log.i("open DB......",db.toString());
+    }
+
+    public void updateStars(String table_name, String id, int value){
+        ContentValues values = new ContentValues();
+        values.put("_id",value);
+        db.update(table_name,values,"_id = "+id,null);
     }
 
     @Override

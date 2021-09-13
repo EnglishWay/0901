@@ -3,12 +3,17 @@ package com.example.englishway;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -59,6 +64,8 @@ public class AllWordsActivity extends AppCompatActivity {
             case "Words7000":
                 c = db1.rawQuery("SELECT * FROM Words7000", null);
                 break;
+            case "WordsStar":
+                c = db1.rawQuery("SELECT * FROM Words1200 WHERE _star = 1 UNION SELECT * FROM Words7000 WHERE _star = 1",null);
             default:
                 throw new IllegalStateException("Unexpected value: " + selectedTable);
         }
@@ -66,7 +73,7 @@ public class AllWordsActivity extends AppCompatActivity {
 
         //獲取表資料
         while (!c.isAfterLast()) {
-            list.add(new initdate(c.getString(c.getColumnIndex("_word")), c.getString(c.getColumnIndex("_intpn"))));
+            list.add(new initdate(c.getString(c.getColumnIndex("_word")), c.getString(c.getColumnIndex("_intpn")),c.getInt(c.getColumnIndex("_star"))));
 
             c.moveToNext();
         }
@@ -76,14 +83,25 @@ public class AllWordsActivity extends AppCompatActivity {
         for (int i = 0; i < list.size(); i++) {
             HashMap<String, Object> item = new HashMap<String, Object>();
             item.put("word", list.get(i).word);
-            item.put("meaning1", list.get(i).intpn);
+            item.put("intpn", list.get(i).intpn);
+            item.put("star", list.get(i).star);
             data.add(item);
         }
         //建立SimpleAdapter介面卡將資料繫結到item顯示控制元件上
         SimpleAdapter adapter = new SimpleAdapter(this, data, R.layout.word_info,
-                new String[]{"word", "meaning1"}, new int[]{R.id.word, R.id.intpn});
+                new String[]{"word", "intpn","star"}, new int[]{R.id.word, R.id.intpn, R.id.star});
         //實現列表的顯示
         listView.setAdapter(adapter);
+
+//        CheckBox starWords = findViewById(R.id.star);
+//        starWords.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if(isChecked){
+//                    db.updateStars();
+//                }
+//            }
+//        });
     }
 
 
