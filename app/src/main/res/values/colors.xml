@@ -12,4 +12,5 @@
     <color name="teal">#00838F</color>
     <color name="orange">#FF6E40</color>
     <color name="brown">#E3D2A7</color>
+    <color name="backgroundColor">#3E454F</color>
 </resources>

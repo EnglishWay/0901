@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EnglishWay">
-        <activity android:name=".FeedActivity"></activity>
+        <activity android:name=".QuizActivity"></activity>
+        <activity android:name=".FeedActivity" />
         <activity android:name=".PetActivity" />
         <activity android:name=".WordsActivity" />
         <activity android:name=".ShopActivity" />
