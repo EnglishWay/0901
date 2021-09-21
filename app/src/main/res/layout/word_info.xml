@@ -27,6 +27,7 @@
         android:id="@+id/star"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:onClick="starWords"
         android:layout_gravity="center"
         style="?android:attr/starStyle"
         />

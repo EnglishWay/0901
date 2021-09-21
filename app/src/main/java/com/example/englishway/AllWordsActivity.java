@@ -2,6 +2,7 @@ package com.example.englishway;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -66,6 +67,7 @@ public class AllWordsActivity extends AppCompatActivity {
                 break;
             case "WordsStar":
                 c = db1.rawQuery("SELECT * FROM Words1200 WHERE _star = 1 UNION SELECT * FROM Words7000 WHERE _star = 1",null);
+                break;
             default:
                 throw new IllegalStateException("Unexpected value: " + selectedTable);
         }
@@ -73,7 +75,7 @@ public class AllWordsActivity extends AppCompatActivity {
 
         //獲取表資料
         while (!c.isAfterLast()) {
-            list.add(new initdate(c.getString(c.getColumnIndex("_word")), c.getString(c.getColumnIndex("_intpn")),c.getInt(c.getColumnIndex("_star"))));
+            list.add(new initdate(c.getInt(c.getColumnIndex("_id")),c.getString(c.getColumnIndex("_word")), c.getString(c.getColumnIndex("_intpn")),c.getInt(c.getColumnIndex("_star"))));
 
             c.moveToNext();
         }
@@ -82,6 +84,7 @@ public class AllWordsActivity extends AppCompatActivity {
         List<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
         for (int i = 0; i < list.size(); i++) {
             HashMap<String, Object> item = new HashMap<String, Object>();
+            item.put("id", list.get(i).id);
             item.put("word", list.get(i).word);
             item.put("intpn", list.get(i).intpn);
             item.put("star", list.get(i).star);
@@ -98,10 +101,13 @@ public class AllWordsActivity extends AppCompatActivity {
 //            @Override
 //            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 //                if(isChecked){
-//                    db.updateStars();
+//                    db.updateStars(,,1);
+//                }else {
+//                    db.updateStars(,,0);
 //                }
 //            }
 //        });
+
     }
 
 

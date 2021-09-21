@@ -61,9 +61,9 @@ public class MyDBOpenHelper extends SQLiteOpenHelper {
         Log.i("open DB......",db.toString());
     }
 
-    public void updateStars(String table_name, String id, int value){
+    public void updateStars(String table_name, int id, int value){
         ContentValues values = new ContentValues();
-        values.put("_id",value);
+        values.put("_star",value);
         db.update(table_name,values,"_id = "+id,null);
     }
 
