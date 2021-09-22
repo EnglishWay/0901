@@ -1,4 +1,4 @@
-package com.example.englishway;
+package com.example.EnglishWay;
 
 import android.view.LayoutInflater;
 import android.view.View;

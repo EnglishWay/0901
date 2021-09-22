@@ -1,4 +1,4 @@
-package com.example.englishway;
+package com.example.EnglishWay;
 
 import java.io.OutputStream;
 import java.io.FileOutputStream;

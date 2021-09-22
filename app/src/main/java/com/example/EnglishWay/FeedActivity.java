@@ -1,12 +1,10 @@
-package com.example.englishway;
+package com.example.EnglishWay;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class FeedActivity extends AppCompatActivity {

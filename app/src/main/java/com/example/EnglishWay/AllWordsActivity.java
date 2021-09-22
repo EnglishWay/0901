@@ -1,4 +1,4 @@
-package com.example.englishway;
+package com.example.EnglishWay;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,15 +9,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 <<<<<<< Updated upstream
 =======
-import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.EditText;
 >>>>>>> Stashed changes
 import android.widget.ListView;
-import android.widget.SearchView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 

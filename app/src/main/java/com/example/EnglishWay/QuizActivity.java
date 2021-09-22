@@ -1,4 +1,4 @@
-package com.example.englishway;
+package com.example.EnglishWay;
 
 import androidx.appcompat.app.AppCompatActivity;
 

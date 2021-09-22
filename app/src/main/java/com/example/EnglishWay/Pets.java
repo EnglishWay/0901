@@ -1,20 +1,4 @@
-package com.example.englishway;
-
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.graphics.Canvas;
-import android.graphics.ColorFilter;
-import android.graphics.PixelFormat;
-import android.graphics.drawable.Drawable;
-import android.view.View;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import java.text.DateFormat;
-import java.util.Date;
-
-import static android.content.Context.MODE_PRIVATE;
+package com.example.EnglishWay;
 
 public class Pets {
     String name; //寵物名
