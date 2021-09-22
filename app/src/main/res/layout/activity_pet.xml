@@ -4,36 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".PetActivity">
 
-    <TextView
+    <ImageView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="219dp"
-        android:layout_marginBottom="196dp"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pet1"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_earn"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:text="@string/button_earn"
-        android:layout_margin="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="158dp" />
-
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="412dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/brown_02"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <Button
@@ -42,6 +36,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange_02"
             android:text="@string/feed" />
 
         <Button
@@ -50,8 +45,10 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/evolve" />
+            android:backgroundTint="@color/yellow"
+            android:text="@string/button_earn" />
 
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

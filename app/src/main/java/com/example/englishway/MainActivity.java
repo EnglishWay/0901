@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     };
+
     private View.OnClickListener clickShop = new View.OnClickListener() {
         @Override
         public void onClick(View v) {

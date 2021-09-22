@@ -5,6 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AllWordsActivity">
+<<<<<<< Updated upstream
+=======
+    <LinearLayout
+        android:id="@+id/allwords_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/allwords_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/material_motion_duration_long_2"
+                android:hint="搜尋單字"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/gray_02"/>
+            <Button
+                android:id="@+id/search_button"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:backgroundTint="@color/teal"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="單字解釋"
+            android:background="@color/teal_200"/>
+    </LinearLayout>
+>>>>>>> Stashed changes
 
     <ListView
         android:id="@+id/word_info"

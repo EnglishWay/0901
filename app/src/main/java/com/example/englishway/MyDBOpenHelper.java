@@ -60,6 +60,10 @@ public class MyDBOpenHelper extends SQLiteOpenHelper {
         Log.i("open DB......",db.toString());
     }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     @Override
     public synchronized void close() {
 

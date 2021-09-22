@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class PetsActivity extends AppCompatActivity {
 
@@ -19,12 +20,12 @@ public class PetsActivity extends AppCompatActivity {
         setListeners();
     }
 
-    private Button pet_1;
-    private Button pet_2;
-    private Button pet_3;
-    private Button pet_4;
-    private Button pet_5;
-    private Button pet_6;
+    private ImageButton pet_1;
+    private ImageButton pet_2;
+    private ImageButton pet_3;
+    private ImageButton pet_4;
+    private ImageButton pet_5;
+    private ImageButton pet_6;
 
     private void initViews() {
         pet_1 = findViewById(R.id.pet_1);

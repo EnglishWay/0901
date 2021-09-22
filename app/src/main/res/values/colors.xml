@@ -10,6 +10,23 @@
     <color name="yellow">#FFCA28</color>
     <color name="blue">#4DD0E1</color>
     <color name="teal">#00838F</color>
+<<<<<<< Updated upstream
     <color name="orange">#FF6E40</color>
     <color name="brown">#E3D2A7</color>
+=======
+    <color name="orange_01">#FF6E40</color>
+    <color name="brown_01">#fdc384</color>
+    <color name="backgroundColor">#3E454F</color>
+    <color name="orange_02">#e28743</color>
+    <color name="orange_03">#e5652a</color>
+    <color name="brown_02">#885128</color>
+    <color name="green">#28945a</color>
+    <color name="gray">#B2B2B2</color>
+    <color name="gray_02">#545454</color>
+    <color name="green_02">#a8e6cf</color>
+    <color name="green_03">#dcedc1</color>
+    <color name="orange_04">#ffd3b6</color>
+    <color name="pink_01">#ffaaa5</color>
+    <color name="pink_02">#ff8b94</color>
+>>>>>>> Stashed changes
 </resources>

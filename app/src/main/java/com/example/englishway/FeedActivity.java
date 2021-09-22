@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,30 +23,32 @@ public class FeedActivity extends AppCompatActivity {
         setListeners();
     }
 
-    private TextView pet_name;
-    private Button button_1;
-    private Button button_2;
+
+    private ImageButton button_1;
+    private ImageButton button_2;
+    private ImageButton button_3;
 
     private void initViews() {
 
-        pet_name = findViewById(R.id.textView);
+
         button_1 = findViewById(R.id.button1);
         button_2 = findViewById(R.id.button2);
+        button_3 = findViewById(R.id.button3);
     }
 
     private void setListeners() {
         button_1.setOnClickListener(itemOnclick);
         button_2.setOnClickListener(itemOnclick);
+        button_3.setOnClickListener(itemOnclick);
     }
 
     private void showResults() {
-        try {
-            Bundle bundle = this.getIntent().getExtras();
-            String petID = bundle.getString("PET_NAME");
-            pet_name.setText(petID);
-        } catch (Exception obj) {
-            Toast.makeText(this, "錯誤", Toast.LENGTH_SHORT).show();
-        }
+//        try {
+//            Bundle bundle = this.getIntent().getExtras();
+//            String petID = bundle.getString("PET_NAME");
+//        } catch (Exception obj) {
+//            Toast.makeText(this, "錯誤", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     private View.OnClickListener itemOnclick = new View.OnClickListener() {
@@ -54,10 +57,13 @@ public class FeedActivity extends AppCompatActivity {
             String item_name = "";
             switch (v.getId()) {
                 case R.id.button1:
-                    item_name = "道具1";
+                    item_name = "飼料1，飽足度+10";
                     break;
                 case R.id.button2:
-                    item_name = "道具2";
+                    item_name = "飼料2，飽足度+20";
+                    break;
+                case R.id.button3:
+                    item_name = "飼料3，飽足度+30";
                     break;
             }
             Toast.makeText(FeedActivity.this,item_name,Toast.LENGTH_SHORT).show();

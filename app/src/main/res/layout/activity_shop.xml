@@ -18,24 +18,36 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="295dp"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_margin="5dp"
-                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pills"
                 tools:ignore="VectorDrawableCompat" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_margin="5dp"
-                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:scaleType="fitCenter"
+                android:src="@drawable/food_1"
                 tools:ignore="VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/food_2"
+                tools:ignore="VectorDrawableCompat" />
+
         </LinearLayout>
     </LinearLayout>
 

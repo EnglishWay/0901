@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="worksButtonStyle">
-        <item name="android:layout_width">210dp</item>
-        <item name="android:layout_height">289dp</item>
-        <item name="android:layout_marginLeft">5dp</item>
-        <item name="android:layout_marginRight">5dp</item>
-        <item name="android:backgroundTint">@color/brown</item>
+    <style name="worksButtonStyle_1">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">400dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:backgroundTint">@color/green_02</item>
+    </style>
+
+    <style name="worksButtonStyle_2">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">400dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:backgroundTint">@color/green_03</item>
+    </style>
+
+    <style name="worksButtonStyle_3">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">400dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:backgroundTint">@color/orange_04</item>
+    </style>
+
+    <style name="worksButtonStyle_4">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">400dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:backgroundTint">@color/pink_01</item>
+    </style>
+
+    <style name="worksButtonStyle_5">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">400dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:backgroundTint">@color/pink_02</item>
     </style>
 
     <style name="petsButtonStyle">

@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WorkActivity">
+    tools:context=".WorkActivity"
+    android:background="@drawable/background">
 
     <HorizontalScrollView
         android:id="@+id/scrollview_works"
-        android:layout_width="415dp"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/gray">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -21,70 +24,70 @@
 
             <Button
                 android:id="@+id/work_1"
-                style="@style/worksButtonStyle"
+                style="@style/worksButtonStyle_1"
                 android:text="@string/button_work1"
                 app:strokeColor="#707070"
                 app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/work_2"
-                style="@style/worksButtonStyle"
+                style="@style/worksButtonStyle_2"
                 android:text="@string/button_work2"
                 app:strokeColor="#707070"
                 app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/work_3"
-                style="@style/worksButtonStyle"
+                style="@style/worksButtonStyle_3"
                 android:text="@string/button_work3"
                 app:strokeColor="#707070"
                 app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/work_4"
-                style="@style/worksButtonStyle"
+                style="@style/worksButtonStyle_4"
                 android:text="@string/button_work4"
                 app:strokeColor="#707070"
                 app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/work_5"
-                style="@style/worksButtonStyle"
+                style="@style/worksButtonStyle_5"
                 android:text="@string/button_work5"
                 app:strokeColor="#707070"
                 app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/work_6"
-                style="@style/worksButtonStyle"
+                style="@style/worksButtonStyle_1"
                 android:text="@string/button_work6"
                 app:strokeColor="#707070"
                 app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/work_7"
-                style="@style/worksButtonStyle"
+                style="@style/worksButtonStyle_2"
                 android:text="@string/button_work7"
                 app:strokeColor="#707070"
                 app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/work_8"
-                style="@style/worksButtonStyle"
+                style="@style/worksButtonStyle_3"
                 android:text="@string/button_work8"
                 app:strokeColor="#707070"
                 app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/work_9"
-                style="@style/worksButtonStyle"
+                style="@style/worksButtonStyle_4"
                 android:text="@string/button_work9"
                 app:strokeColor="#707070"
                 app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/work_10"
-                style="@style/worksButtonStyle"
+                style="@style/worksButtonStyle_5"
                 android:text="@string/button_work10"
                 app:strokeColor="#707070"
                 app:strokeWidth="2dp" />
@@ -96,6 +99,7 @@
         android:id="@+id/button_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:text="@string/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

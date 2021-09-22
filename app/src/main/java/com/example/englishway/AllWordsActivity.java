@@ -7,7 +7,17 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+<<<<<<< Updated upstream
+=======
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
+>>>>>>> Stashed changes
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
@@ -84,7 +94,59 @@ public class AllWordsActivity extends AppCompatActivity {
                 new String[]{"word", "meaning1"}, new int[]{R.id.word, R.id.intpn});
         //實現列表的顯示
         listView.setAdapter(adapter);
+<<<<<<< Updated upstream
+=======
+
+
+//        Button searchButton = findViewById(R.id.search_button);
+//        searchButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                search();
+//            }
+//        });
+>>>>>>> Stashed changes
     }
+//    private void search() {
+//
+//        EditText search = findViewById(R.id.edit_text);
+//        String input = search.getText().toString().trim();
+//        SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase("Words.db", null);
+//        Cursor cursor ;
+//        switch (selectedTable) {
+//            case "Words1200":
+//                cursor = db.rawQuery("SELECT * FROM Words1200 WHERE _word like ?",new String[]{"%"+input+"%"});
+//                break;
+//            case "Words7000":
+//                cursor = db.rawQuery("SELECT * FROM Words7000 WHERE _word like ?",new String[]{"%"+input+"%"});
+//                break;
+//            default:
+//                throw new IllegalStateException("Unexpected value: " + selectedTable);
+//        }
+//        cursor.moveToFirst();
+//
+//        List<initdate> list = new ArrayList<>();
+//        while (!cursor.isAfterLast()) {
+//            list.add(new initdate(cursor.getInt(cursor.getColumnIndex("_id")),cursor.getString(cursor.getColumnIndex("_word")), cursor.getString(cursor.getColumnIndex("_intpn")),cursor.getInt(cursor.getColumnIndex("_star"))));
+//
+//            cursor.moveToNext();
+//        }
+//
+//        List<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
+//        for (int i = 0; i < list.size(); i++) {
+//            HashMap<String, Object> item = new HashMap<String, Object>();
+//            item.put("id", list.get(i).id);
+//            item.put("word", list.get(i).word);
+//            item.put("intpn", list.get(i).intpn);
+//            data.add(item);
+//        }
+//
+//        SimpleAdapter adapter = new SimpleAdapter(this, data, R.layout.word_info,
+//                new String[]{"word", "intpn"}, new int[]{R.id.word, R.id.intpn});
+//        //實現列表的顯示
+//        listView.setAdapter(adapter);
+//    }
+
 
 
 }

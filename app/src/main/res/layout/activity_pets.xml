@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PetsActivity">
+    tools:context=".PetsActivity"
+    android:background="@color/gray">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,35 +23,46 @@
                 android:orientation="horizontal"
                 tools:layout_editor_absoluteY="731dp">
 
-                <Button
+                <ImageButton
                     android:id="@+id/pet_1"
                     style="@style/petsButtonStyle"
                     android:layout_weight="1"
-                    android:text="@string/pet_1" />
+                    android:text="@string/pet_1"
+                    android:src="@drawable/pet1"
+                    android:scaleType="fitCenter"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/brown_01"/>
 
-                <Button
+                <ImageButton
                     android:id="@+id/pet_2"
                     style="@style/petsButtonStyle"
                     android:layout_weight="1"
-                    android:text="@string/pet_2" />
+                    android:text="@string/pet_2"
+                    android:layout_margin="10dp"
+                    android:visibility="invisible"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                >
 
-                <Button
+                <ImageButton
                     android:id="@+id/pet_3"
                     style="@style/petsButtonStyle"
                     android:layout_weight="1"
-                    android:text="@string/pet_3" />
+                    android:text="@string/pet_3"
+                    android:layout_margin="10dp"
+                    android:visibility="invisible"/>
 
-                <Button
+                <ImageButton
                     android:id="@+id/pet_4"
                     style="@style/petsButtonStyle"
                     android:layout_weight="1"
-                    android:text="@string/pet_4" />
+                    android:text="@string/pet_4"
+                    android:layout_margin="10dp"
+                    android:visibility="invisible"/>
             </LinearLayout>
 
             <LinearLayout
@@ -58,17 +70,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
+                <ImageButton
                     android:id="@+id/pet_5"
                     style="@style/petsButtonStyle"
                     android:layout_weight="1"
-                    android:text="@string/pet_5" />
+                    android:text="@string/pet_5"
+                    android:layout_margin="10dp"
+                    android:visibility="invisible"/>
 
-                <Button
+                <ImageButton
                     android:id="@+id/pet_6"
                     style="@style/petsButtonStyle"
                     android:layout_weight="1"
-                    android:text="@string/pet_6" />
+                    android:text="@string/pet_6"
+                    android:layout_margin="10dp"
+                    android:visibility="invisible"/>
             </LinearLayout>
 
         </LinearLayout>

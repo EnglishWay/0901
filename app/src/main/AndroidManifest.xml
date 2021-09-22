@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EnglishWay">
+<<<<<<< Updated upstream
         <activity android:name=".FeedActivity"></activity>
+=======
+        <activity android:name=".ShopActivity"></activity>
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".FeedActivity" />
+>>>>>>> Stashed changes
         <activity android:name=".PetActivity" />
         <activity android:name=".WordsActivity" />
-        <activity android:name=".ShopActivity" />
         <activity android:name=".AllWordsActivity" />
         <activity android:name=".PetsActivity" />
         <activity android:name=".WorkActivity" />

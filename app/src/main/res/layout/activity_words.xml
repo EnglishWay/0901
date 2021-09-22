@@ -22,7 +22,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:layout_margin="10dp"
-                            android:text="@string/_2000" />
+                            android:text="@string/_2000"
+                            android:backgroundTint="@color/purple_500"/>
 
                         <Button
                             android:id="@+id/word4500"
@@ -36,15 +37,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:layout_margin="10dp"
-                            android:text="@string/_7000" />
+                            android:text="@string/_7000"
+                            android:backgroundTint="@color/purple_700"/>
 
-                        <Button
-                            android:id="@+id/word_star"
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_margin="10dp"
-                            android:text="@string/word_star"
-                            app:backgroundTint="@color/orange" />
                 </LinearLayout>
         </ScrollView>
 
