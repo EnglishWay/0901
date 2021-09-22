@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.englishway">
+    package="com.example.EnglishWay">
 
     <application
         android:allowBackup="true"
@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EnglishWay">
+<<<<<<< Updated upstream
         <activity android:name=".FeedActivity"></activity>
         <activity android:name=".PetActivity" />
         <activity android:name=".WordsActivity" />
@@ -17,6 +18,18 @@
         <activity android:name=".PetsActivity" />
         <activity android:name=".WorkActivity" />
         <activity android:name=".MainActivity">
+=======
+        <activity android:name="com.example.EnglishWay.FeedActivity"></activity>
+        <activity android:name="com.example.EnglishWay.ShopActivity"></activity>
+        <activity android:name="com.example.EnglishWay.QuizActivity" />
+        <activity android:name="com.example.EnglishWay.FeedActivity" />
+        <activity android:name="com.example.EnglishWay.PetActivity" />
+        <activity android:name="com.example.EnglishWay.WordsActivity" />
+        <activity android:name="com.example.EnglishWay.AllWordsActivity" />
+        <activity android:name="com.example.EnglishWay.PetsActivity" />
+        <activity android:name="com.example.EnglishWay.WorkActivity" />
+        <activity android:name="com.example.EnglishWay.MainActivity">
+>>>>>>> Stashed changes
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
